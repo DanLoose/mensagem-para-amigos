@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 
+app.use(express.static('public'))
+
 app.get('/', (req, res) => {
-    res.send('Dri vc é incrivel <3 <3')
+    res.render('index')
 })
 
 app.listen(3333)
